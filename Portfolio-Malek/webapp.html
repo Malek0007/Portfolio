@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style/styles.css">
+    <title>A Portfolio</title>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Portfolio</a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+    
+        <nav class="navbar">
+            <a href="index.html#home">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="index.html#services">Skills</a>
+            <a href="index.html#portfolio">Portfolio</a>
+            <a href="index.html#contact">Contact</a> 
+        </nav>
+    </header>
+
+    <!-- Project Section -->
+    <section id="project">
+        <h2>Web application: HomeGuide</h2>
+        <a href="https://github.com/Malek0007/Web_Application" class="github-link">Link to GitHub</a>
+        <div class="project-content">
+            <!-- Video Section -->
+            <div class="project-video">
+                <video width="100%" controls>
+                    <source src="videos/Homeguide.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+    
+            <div class="project-description">
+                <h3>Presentation of the project</h3>
+                <p>The website specializes in renting accommodations tailored to the needs of students, with a focus on proximity to universities. It also includes private and public dormitories, offering a wide range of housing options to meet the diverse needs of students.</p>
+                <h3>Technologies Used</h3>
+    <ul>
+        <li><strong>MERN Stack:</strong> For building the web application (MongoDB, Express.js, React.js, Node.js)</li>
+        <li><strong>Firebase:</strong> For authentication, and storing images and videos</li>
+    </ul>
+            </div>
+        </div>
+        <div class="right-text">
+            <h2>Functionalities</h2>
+            <div class="stage">
+            <p>The user can be either a student or a landlord.</p>
+            
+            <h4>For the student:</h4>
+            <p>Students can view recent offers and their details, filter results based on proximity to the university, type of transaction (Rent or Sale), and amenities such as parking or whether the property is furnished. They can also sort prices from low to high or vice versa.</p>
+            <p>For each offer, students can see the price, location, description, and a virtual tour. They can contact the landlord via email after creating an account.</p>
+            
+            <h4>For the landlord:</h4>
+            <p>Landlords can create an account to update their profile, add a photo, create listings, or delete their account. The platform supports full CRUD functionalities (Create, Read, Update, Delete).</p>
+            <p>When creating a listing, landlords can enter all details, including the description, proximity to universities, number of beds and baths, and upload or delete images. The listing is then displayed, and landlords can update or delete it. All changes are saved to the database.</p>
+        </div>
+    </div>
+
+    </section>
+    
+    
+        
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>email: malek.abida@supcom.tn</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="JS/main.js"></script>
+    <script src="JS/gallery.js"></script>
+</body>
+</html>
