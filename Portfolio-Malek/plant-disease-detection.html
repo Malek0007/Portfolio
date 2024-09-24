@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style/styles.css">
+    <title>A Portfolio</title>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Portfolio</a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+    
+        <nav class="navbar">
+            <a href="index.html#home">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="index.html#services">Skills</a>
+            <a href="index.html#portfolio">Portfolio</a>
+            <a href="index.html#contact">Contact</a> 
+        </nav>
+    </header>
+
+    <!-- Project Section -->
+    <section id="project">
+        <h2>Plant Disease Detection</h2>
+
+       
+<a href="https://github.com/Malek0007/plants-disease-detection" class="github-link">Link to GitHub</a>
+        <div class="project-content">
+            <div class="project-gallery">
+                <button class="gallery-btn left-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="project-image">
+                    <img src="images/Capture d'écran 2024-08-19 202854.png" alt="Project Image 1" class="active">
+                    <img src="images/Capture d'écran 2024-09-14 195318.png" alt="Project Image 2">
+                    <img src="images/Capture d'écran 2024-08-19 202929.png" alt="Project Image 2">
+                </div>
+                <button class="gallery-btn right-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="project-description">
+                <h3>Presentation of the project</h3>
+                <p>The project is a plant disease detection application that can identify diseases or anomalies based on images of leaves.</p>
+                
+                    <h3>Technologies Used</h3>
+                    <ul> <li><strong>Deep Learning:</strong> Using TensorFlow and Keras</li> <li><strong>HTML,CSS and Javascript:</strong> For the frontend</li><li><strong>Flask:</strong> For the backend</li> <li><strong>MLOps:</strong> For deploying the application</li> </ul>
+                </div>
+            </div>
+            <div class="right-text">
+                <h2>Functionalities</h2>
+                <div class="stage">
+                <p>This model is prepared towards building a complete machine learning pipeline for image classification,
+                     from dataset preparation to model training, evaluation, and prediction.</p>
+                     <h3>Data preparation and preprocessing:</h3>
+                     <p>
+                      The first step is preparation and preprocessing of data, which includes key tasks like resizing the images to a uniform dimension,
+                       rescaling pixel values to a range between 0 and 1, and applying data augmentation to artificially expand the dataset. 
+                       Data augmentation introduces random transformations such as flipping, rotating, and zooming. Additionally, the model optimizes the TensorFlow pipeline by using techniques like caching and prefetching.Thus improving overall training performance.</p>
+                
+                <h3>Training the deep learning model:</h3>
+                <p>The model is a Convolutional Neural Network (CNN) built with TensorFlow's Keras API, starting with resizing, rescaling, and data augmentation. 
+                    It uses six Conv2D layers, each followed by MaxPooling2D to reduce spatial dimensions while capturing important features.
+                     The model applies ReLU activation and ends with a Dense layer of 64 units,
+                      followed by a softmax output layer for multi-class classification (15 classes).
+                       It is compiled with the Adam optimizer and Sparse Categorical Crossentropy, and trained using model.fit(),
+                        with accuracy used for evaluation.</p>
+                <h3>Developing the application and deploying it:</h3>
+                <p>In this stage, we can make predictions and then save the model as a .keras file for later use.
+                     This model will be integrated into the Flask application to provide prediction capabilities. 
+                     After integrating the model, we can containerize the application using Docker to ensure consistent deployment across different environments.
+                     This approach simplifies the management of dependencies and makes scaling the application easier</p>
+                    </div>
+        </div>
+    
+</section>
+        
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>email: malek.abida@supcom.tn</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="JS/main.js"></script>
+    <script src="JS/gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style/styles.css">
+    <title>A Portfolio</title>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Portfolio</a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+    
+        <nav class="navbar">
+            <a href="index.html#home">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="index.html#services">Skills</a>
+            <a href="index.html#portfolio">Portfolio</a>
+            <a href="index.html#contact">Contact</a> 
+        </nav>
+    </header>
+
+    <!-- Project Section -->
+    <section id="project">
+        <h2>Text Summarizer</h2>
+        <a href="https://github.com/Malek0007/Summarization" class="github-link">Link to GitHub</a>
+        <div class="project-content">
+            <!-- Video Section -->
+            <div class="project-video">
+                <video width="100%" controls>
+                    <source src="videos/textsummarizer.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+    
+            <div class="project-description">
+                
+        
+                <h3>Presentation of the project</h3>
+        <p>The interface is simple and easy to use. Users can enter their text into a provided box and adjust a slider to set the maximum length of the summary. After clicking the "Submit" button, the summarized text appears right below the original input.</p>
+        <h3>Technologies Used</h3>
+        <p>This project uses the following technologies:</p>
+        <ul>
+            <li><strong>Flask</strong> is used to build the web interface and handle routing.</li>
+            <li><strong>Hugging Face API</strong> powers the text summarization model.</li>
+            <li><strong>HTML/CSS/Javascript</strong> is used for building the user interface.</li>
+        </ul>
+        
+            </div>
+        </div>
+        <div class="right-text">
+            <h2>Functionalities</h2>
+            <div class="stage">
+            <h3>Automatic Text Summarization Model</h3>
+        <p>The app uses Hugging Face's API the <strong>BART</strong> model, which is designed for summarizing text. The API is called through a POST request, sending the user's text and the chosen summary length (minimum and maximum) in the request.</p>
+
+        <h3>Processing and Display</h3>
+        <p>Once the user submits their text, the backend sends it to the API, which returns a summarized version. The summary is then displayed on the page alongside the original text for easy comparison.</p>
+        <h3>Backend using Flask</h3>
+        <p>The application is built using Python with the Flask framework. It handles two main routes:</p>
+        <ul>
+            <li>The <strong>/</strong> route displays the homepage with the text input form.</li>
+            <li>The <strong>/Summarize</strong> route processes the text and sends it to a text summarization model.</li>
+        </ul>
+        
+
+        <h3>Project Usefulness</h3>
+        <p>This project is useful for quickly summarizing long texts like articles, reports, or documents. It is a great example of how web applications can integrate natural language processing (NLP) models to provide efficient solutions for text analysis.</p>
+    </div>
+    </div>
+
+    </section>
+    
+    
+        
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>email: malek.abida@supcom.tn</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="JS/main.js"></script>
+    <script src="JS/gallery.js"></script>
+</body>
+</html>

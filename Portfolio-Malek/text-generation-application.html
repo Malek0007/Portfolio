@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style/styles.css">
+    <title>A Portfolio</title>
+    <!-- <style>
+        img {
+          width: 1000px; /* Set your desired width */
+          height: 500px; /* Set your desired height */
+          object-fit: cover; /* Ensures the image maintains aspect ratio */
+        }
+      </style>
+       -->
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Portfolio</a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+    
+        <nav class="navbar">
+            <a href="index.html#home">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="index.html#services">Skills</a>
+            <a href="index.html#portfolio">Portfolio</a>
+            <a href="index.html#contact">Contact</a> 
+        </nav>
+    </header>
+
+    <!-- Project Section -->
+    <section id="project">
+        <h2>Text <span>Generation Application</span> using NLP and LLM</h2>
+        <a href="https://github.com/Malek0007/Text-Generation-App-using-NLP-and-LLM" class="github-link">Link to GitHub</a>
+        <div class="project-content">
+            <div class="project-gallery">
+                <button class="gallery-btn left-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="project-image">
+                    <img src="images/GenAI.png" alt="Project Image 1" class="active">
+                    
+                    <img src="images/Capture d'écran 2024-08-29 234905.png" alt="Project Image 2">
+                    <img src="images/Capture d'écran 2024-08-30 014237.png" alt="Project Image 2">
+                    <img src="images/Capture d'écran 2024-08-30 223711.png" alt="Project Image 2">
+                    <img src="images/Capture d'écran 2024-08-30 223711.png" alt="Project Image 2">
+                    <img src="images/Capture d'écran 2024-08-31 002518.png" alt="Project Image 2">
+                    <img src="images/Capture d'écran 2024-08-31 005208.png" alt="Project Image 2">
+                    
+                </div>
+                <button class="gallery-btn right-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="project-description">
+                <p>The project is a text generation application that processes accident descriptions using Natural Language Processing (NLP) and Large Language Model (LLM) techniques.</p>
+                <p>The text generation application is structured around two main components:</p>
+            <ul>
+                <li>Text Processing</li>
+                <li>Text Generation</li>
+            </ul>
+            <p>The process begins with text processing, where raw text is cleaned and prepared. Then, text generation uses the processed text as a base to produce generated content.</p>
+            <p>Below is the general architecture of the application development in Visual Studio Code. I divided my code into two main parts:</p>
+            <ul>
+                <li><strong>Frontend:</strong> Developed using Flask</li>
+                <li><strong>Backend:</strong> Developed in Python with the following components:
+                    <ul>
+                        <li>Error Correction Stage</li>
+                        <li>Information Extraction Stage</li>
+                        <li>General Processing Stage</li>
+                        <li>Translation Stage</li>
+                        <li>Filtering Stage</li>
+                        <li>Generation Stage</li>
+                    </ul>
+                </li>
+            </ul>
+            </div>
+        </div>
+        <h2>Accident Report Processing Pipeline</h2>
+
+        <div class="stage">
+            <h3>1. Information Extraction Stage</h3>
+            <p>This first stage involves extracting the date and location of the accident from the description. It is considered the initial step to ensure that these essential pieces of information are not removed during the subsequent text cleaning process.</p>
+            <ul>
+                <li>Date extraction is performed using the regex library.</li>
+                <li>Location extraction is achieved through Named Entity Recognition (NER) in NLP.</li>
+            </ul>
+            
+        </div>
+    
+        <div class="stage">
+            <h3>2. Text Cleaning Stage</h3>
+            <p>Text cleaning is an essential step in natural language processing. The cleaning process involves removing:</p>
+            <ul>
+                <li>URLs</li>
+                <li>Email addresses</li>
+                <li>Arbitrary numbers</li>
+                <li>HTML tags</li>
+                <li>Any other unnecessary information</li>
+            </ul>
+            <p>This stage also includes removing words that are not found in the dictionary, using the BERT model from Hugging Face.</p>
+            
+        </div>
+    
+        <div class="stage">
+            <h3>3. Text Correction Stage</h3>
+            <p>For the text correction stage, a function is used to correct typographical errors, as well as grammar and spelling mistakes. This is done using specific tools depending on the language:</p>
+            <ul>
+                <li>Pyspellchecker for French</li>
+                <li>TextBlob for English</li>
+            </ul>
+        </div>
+    
+        <div class="stage">
+            <h3>4. Text Translation Stage</h3>
+            <p>The translation process starts by translating individual words from a file named <strong>car-accident-translation</strong>, which contains a list of French words and their English translations related to accidents. If a word is not found in this file, the Google Translate API is used. If the API translation is insufficient for the context, the pre-trained MarianMTModel from Hugging Face is used for more accurate translation.</p>
+            
+        </div>
+    
+        <div class="stage">
+            <h3>5. Text Filtering Stage</h3>
+            <p>The objective of this stage is to remove all irrelevant or out-of-context sentences using a classification model. The model identifies and filters out non-pertinent sentences in the text. The steps are as follows:</p>
+            <ul>
+                <li>Data Collection and Labeling</li>
+                <li>Data Splitting, Preprocessing, and Tokenization using <strong>DistilBertTokenizerFast</strong></li>
+                <li>Model Configuration and Fine-Tuning with <strong>DistilBERT</strong></li>
+            </ul>
+            
+        </div>
+    
+        <div class="stage">
+            <h3>6. Extraction of Vehicle Type and Sentiments</h3>
+            <p>The extraction of the vehicle type and sentiment is performed after the text correction and translation to ensure accurate identification of vehicles in English. I provided a file listing all vehicle types in English for reliable extraction.</p>
+            <p>Sentiment extraction is done using a Hugging Face pipeline for sentiment analysis.</p>
+            
+        </div>
+    
+        <div class="stage">
+            <h3>7. Text Generation Stage</h3>
+            <p>This stage uses a pretrained generation model to produce texts based on a given prompt. </p>
+            <ul>
+                <li><strong>distilbert/distilgpt2</strong> from Hugging Face Transformers</li>
+        
+            </ul>
+        </div>
+    
+</section>
+        
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>email: malek.abida@supcom.tn</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="JS/main.js"></script>
+    <script src="JS/gallery.js"></script>
+</body>
+</html>
