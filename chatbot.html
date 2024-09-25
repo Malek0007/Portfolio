@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style/styles.css">
+    <title>A Portfolio</title>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Portfolio</a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+    
+        <nav class="navbar">
+            <a href="index.html#home">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="index.html#services">Skills</a>
+            <a href="index.html#portfolio">Portfolio</a>
+            <a href="index.html#contact">Contact</a> 
+        </nav>
+    </header>
+
+    <!-- Project Section -->
+    <section id="project">
+        <h2>My Chatbot</h2>
+        <a href="https://github.com/Malek0007/my_chatot" class="github-link">Link to GitHub</a>
+        <div class="project-content">
+            <div class="project-gallery">
+                <button class="gallery-btn left-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="project-image">
+                    <img src="images/Chat.png" alt="Project Image 1" class="active">
+                    <img src="images/Chatt.png" alt="Project Image 2">
+                    <img src="images/chaaaattt.png" alt="Project Image 2">
+                </div>
+                <button class="gallery-btn right-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="project-description">
+                <h3>Presentation of the project</h3>
+                <p>The app is a Flask-based chatbot web application that uses NLP and a deep learning model (trained with Keras and TensorFlow) to interact with users. It classifies user inputs (sentences) into predefined intents and responds accordingly.</p>
+                    <h3>Technologies Used</h3>
+                    <h1>Technologies Used</h1>
+                    <ul>
+                        <li><strong>Flask:</strong> For the backend server and API handling.</li>
+                        <li><strong>HTML, CSS, JavaScript:</strong> For the frontend user interface.</li>
+                        <li><strong>Deep Learning:</strong> Using Keras (with TensorFlow) for model training and inference.</li>
+                        <li><strong>NLP (Natural Language Processing):</strong> For processing and understanding user input, utilizing libraries like NLTK.</li>
+                    </ul> 
+                </div>
+            </div>
+            <div class="right-text">
+                <h2>Functionalities</h2>
+             
+                <div class="stage">
+                <h3>Data Preprocessing</h3>
+                <ul>
+                    <li><strong>Words:</strong> Holds all unique words found in the patterns.</li>
+                    <li><strong>Classes:</strong> Holds all unique intents (tags).</li>
+                    <li><strong>Documents:</strong> Contains pairs of tokenized patterns and their respective tags.</li>
+                </ul>
+                <p>The preprocessing steps include:</p>
+                <ul>
+                    <li><strong>Tokenization:</strong> User inputs (patterns) are tokenized using <code>nltk.word_tokenize()</code>.</li>
+                    <li><strong>Lemmatization:</strong> Each word is lemmatized (converted to its base form), while ignoring certain characters (such as ?, !, and .).</li>
+                    <li><strong>Storage:</strong> After preprocessing, the words and classes are sorted and stored in <code>words.pkl</code> and <code>classes.pkl</code> files for later use.</li>
+                </ul>
+            
+                <h3>Training Data Creation</h3>
+                <ul>
+                    <li><strong>Bag of Words Representation:</strong> For each pattern in the documents, a "bag of words" is created. This is a list where each element indicates whether a specific word (from the list of words) is present in the pattern.</li>
+                    <li><strong>Output Row:</strong> Represents which class (intent) the current pattern corresponds to, using a one-hot encoded vector.</li>
+                </ul>
+                <p>The training data is stored in a variable called <code>training</code>, which is then shuffled for better training.</p>
+            
+                <h3>Neural Network Model</h3>
+                <p>The output layer of the model uses softmax activation to predict probabilities for each intent, enabling multi-class classification. The model is trained to classify user input into different intents based on the provided patterns and responses in the JSON file. After training, the model is saved to handle future queries.</p>
+            
+                <h3>Developing the Chatbot</h3>
+                <p>I utilize the <code>model.h5</code> file to develop the Flask application for the chatbot. This file contains the trained deep learning model, which is essential for predicting user intents based on their input. The Flask application serves as the backend, handling requests from the frontend, processing user messages, and returning appropriate responses generated by the model.</p>
+            
+            </div>
+        </div>
+    
+</section>
+        
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>email: malek.abida@supcom.tn</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="JS/main.js"></script>
+    <script src="JS/gallery.js"></script>
+</body>
+</html>

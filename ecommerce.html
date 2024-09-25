@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style/styles.css">
+    <title>A Portfolio</title>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Portfolio</a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+    
+        <nav class="navbar">
+            <a href="index.html#home">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="index.html#services">Skills</a>
+            <a href="index.html#portfolio">Portfolio</a>
+            <a href="index.html#contact">Contact</a> 
+        </nav>
+    </header>
+
+    <!-- Project Section -->
+    <section id="project">
+        <h2>Microservice E-commerce Application</h2>
+        <a href="https://github.com/Malek0007/P2M" class="github-link">Link to GitHub</a>
+        <div class="project-content">
+            <div class="project-gallery">
+                <button class="gallery-btn left-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="project-image">
+                    <img src="images/Capture d'écran 2024-06-02 141534.png" alt="Project Image 1" class="active">
+                    <img src="images/Capture d'écran 2024-06-02 141712.png" alt="Project Image 2">
+                    <img src="images/Capture d'écran 2024-06-02 142006.png" alt="Project Image 2">
+                    <img src="images/Capture d'écran 2024-06-02 142015.png" alt="Project Image 2">
+                    <img src="images/Capture d'écran 2024-06-02 142022.png" alt="Project Image 2">
+                </div>
+                <button class="gallery-btn right-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="project-description">
+                <h3>Presentation of the project</h3>
+                <p>This application an e-commerce platform for smart home devices, using a microservices architecture and implementing DevOps automation.
+                     It offers numerous significant advantages in terms of flexibility, scalability, and operational efficiency. 
+                     This approach allows for modular management of services, facilitating updates and deployments.
+                     It also ensures rapid adaptability to market changes and new user requirements while improving the overall performance of the system.</p>
+                    
+                     
+                    </div>
+            </div>
+            <div class="right-text">
+                <h2>Functionalities</h2>
+                <h3>Technology Stack Overview</h3>
+                        <ul>
+                            <li><strong>Node.js, Express.js, React.js, MongoDB</strong>: Used for the development of the frontend and backend, with data stored in MongoDB.</li>
+                            <li><strong>Docker and Docker Compose</strong>: For managing each microservice and facilitating local testing and deployment.</li>
+                            <li><strong>Nginx</strong>: Web server used to serve and proxy the frontend service within Docker containers.</li>
+                            <li><strong>RabbitMQ</strong>: Message broker that ensures reliable communication between microservices.</li>
+                            <li><strong>Kubernetes</strong>: For automating the deployment and scaling of containerized applications.</li>
+                            <li><strong>Jenkins</strong>: Automation server for continuous integration and deployment (CI/CD), improving development speed.</li>
+                            <li><strong>Azure</strong>: For deployment of the application.</li>
+                            <li><strong>Git and GitHub</strong>: For efficient code management.</li>
+                            <li><strong>Pytest</strong>: For testing, enhancing reliability through unit testing.</li>
+                        </ul>
+                
+                        <div class="stage">
+                <h3>Platform Description</h3>
+                
+                        <p>
+                            Once authenticated, the user can access the platform. It is based on a microservices architecture: 
+                            customer, shopping, and product, allowing users to browse products, purchase them, add them to their 
+                            cart, and save them to a wishlist if available. The platform also provides detailed cost breakdowns 
+                            for each product, aiming to offer the best possible user experience.
+                        </p>
+
+                        <h3>DevOps Architecture Design</h3>
+                        <p>
+                            To transform each microservice into a container, I used Docker. I tested the communication through 
+                            RabbitMQ. In this case, when the specific client server is stopped, I observed the sending of a 
+                            message indicating this. The message remains in the queue until the server is back online and 
+                            receives it.
+                        </p>
+                        <p>
+                            As a result, the deployment on Azure Cloud was a crucial step. Utilizing Azure's cloud computing 
+                            services allowed me to deploy the application flexibly and scalably, tailored to the growing needs 
+                            of users. I took advantage of Azure's auto-scaling capabilities. Additionally, Azure’s built-in monitoring and error 
+                            management tools helped me maintain high availability and respond quickly to potential issues, 
+                            ensuring a continuous and uninterrupted user experience.
+                        </p>
+
+                        <h3>Results and Analysis</h3>
+                        <p>
+                            The implementation of the CI/CD pipeline for the IoT smart home product sales platform led to 
+                            several benefits. Firstly, it enabled faster and more efficient delivery of new features and bug 
+                            fixes, reducing time to market. Secondly, it improved platform quality by automatically testing code 
+                            changes and detecting bugs early in the development phases. Thirdly, it increased platform reliability 
+                            by automating the deployment process and ensuring consistency across all environments.
+                        </p>
+                        <p>
+                            During the testing phase, I identified several bugs that would have gone unnoticed without 
+                            automated testing. This underscores the importance of testing in the software development process and 
+                            the added value that CI/CD pipelines can bring by detecting bugs early. The deployment process was 
+                            also made more efficient and reliable through the use of Kubernetes. The ability to deploy container 
+                            images on Kubernetes clusters using Kubernetes manifests ensured consistency across environments and 
+                            reduced the likelihood of deployment errors.
+                        </p>
+                        <p>
+                            Furthermore, I made every effort to deliver a production-ready final product by focusing on error 
+                            management. By integrating robust error-handling mechanisms into the pipeline, I was able to identify, 
+                            log, and proactively fix errors before they affected end users. This not only improved the user 
+                            experience but also strengthened the stability and resilience of the platform. Thanks to this 
+                            proactive approach, I successfully delivered a reliable, high-quality solution ready for deployment.
+                        </p>
+                        <p>
+                            Overall, the CI/CD pipeline for the IoT smart home product sales platform has proven to be a valuable 
+                            addition to the software development process. It enabled me to deliver new features and bug fixes 
+                            more efficiently, improve the quality and reliability of the platform, and detect bugs early in the 
+                            development process. The use of open-source tools such as Jenkins, GitLab, Docker, and Kubernetes made 
+                            the implementation of the pipeline cost-effective and accessible for small and medium enterprises 
+                            specializing in IoT smart home products.
+                        </p>
+                    </div>
+            </div>
+    
+</section>
+        
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>email: malek.abida@supcom.tn</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="JS/main.js"></script>
+    <script src="JS/gallery.js"></script>
+</body>
+</html>

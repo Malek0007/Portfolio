@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style/styles.css">
+    <title>A Portfolio</title>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Portfolio</a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+    
+        <nav class="navbar">
+            <a href="index.html#home">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="index.html#services">Skills</a>
+            <a href="index.html#portfolio">Portfolio</a>
+            <a href="index.html#contact">Contact</a> 
+        </nav>
+    </header>
+
+    <!-- Project Section -->
+    <section id="project">
+        <h2>Mobile application: MentorMate</h2>
+        <a href="https://github.com/Malek0007/Mobile_App" class="github-link">Link to GitHub</a>
+        <div class="project-content">
+            <!-- Video Section -->
+            <div class="project-video">
+                <video width="100%" controls>
+                    <source src="videos/mobile.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+    
+            <div class="project-description">
+                <h3>Presentation of the project</h3>
+                <p>The idea of the application is to connect students who want to do well in their dream job with experienced experts in that field. This app will provide personalized long-term guidance, the best resources, and specific advice for the job they want.
+ 
+                    There's also a unique opportunity: mentors can recommend students after the mentoring period, helping them smoothly transition into the professional world.</p> 
+                <h3>Technologies Used</h3>
+    <ul><li><strong>Frontend:</strong> Flutter</li>
+        <li><strong>Backend:</strong> Firebase</li>
+        <li><strong> APIs:</strong> Kommunicate API for the chatbot, 
+            OpenWeather API for weather data, 
+            Custom API for password reset (Forget Password)</li>
+       
+
+       </ul>
+
+            </div>
+        </div>
+        <div class="right-text">
+            <h2>Functionalities</h2>
+    <div class="stage">
+            <p>The principal page features a "Get Started" button, guiding users to a subsequent page where they can choose to connect either as a mentor
+                or as a student.</p>
+            
+            
+            <p>Both mentors and students use the same page to enter their accounts. But if you don't have an account yet, mentors and students each have their own page to create a new account.</p>
+            <h4>For the student:</h4>
+            <p>As a student in the app, you can access the navigation bar, where you'll find options such as Menu, Home, Our Mentors,Our offers, Projects, About Us, and Contact.</p>
+            
+            <h4>For the mentor:</h4>
+            <p>As a mentor in the app, you can access the navigation bar, where you'll find options such as Menu, Home,Our students, About Us, and Contact.</p>
+        </div>
+    </div>
+
+    </section>
+    
+    
+        
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>email: malek.abida@supcom.tn</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="JS/main.js"></script>
+    <script src="JS/gallery.js"></script>
+</body>
+</html>
